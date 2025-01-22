@@ -1,0 +1,8 @@
+parameter,value
+brightness minimum,0.000
+brightness maximum,110.000
+sigma (Gaussian blur),1.800
+size threshold (Analyze Particles),55.000
+maximum filter radius,3.000
+minimum filter radius,4.000
+length threshold (Branch Pruning),20.000
