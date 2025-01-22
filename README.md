@@ -4,6 +4,7 @@ VESNA (Vessel Segmentation and Network Analysis) is a macro for the open-source 
 
 ***[doi]***
 
+***[also reference [lacan/Olivier Burri](https://gist.github.com/lacan/0a12113b1497db86d7df3ef102efd34d) for original Branch Pruning script]***
 
 
 
@@ -32,7 +33,7 @@ To install VESNA, follow these steps:
 
 3. **Install any Requirements**:
 
-    - Download the `VESNA_branch_pruning.bsh` file from this repository and move it to this folder: `Fiji.app/plugins/`.
+    - Download the `VESNA_branch_pruning.bsh` file from this repository and move it to this folder: `Fiji.app/macros/`.
     - To install Bio-Formats and MorphoLibJ directly from Fiji, go to *Help>Update...* to start the updater. Click *Manage Update Sites* and check **"Bio-Formats"** and **"IJPB-plugins"**, if they are not checked already, and confirm. After restarting Fiji, any newly installed packages are ready for use.
 
 
