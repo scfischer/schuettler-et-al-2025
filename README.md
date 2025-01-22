@@ -4,7 +4,9 @@ VESNA (Vessel Segmentation and Network Analysis) is a macro for the open-source 
 
 ***[doi]***
 
-***[also reference [lacan/Olivier Burri](https://gist.github.com/lacan/0a12113b1497db86d7df3ef102efd34d) for original Branch Pruning script]***
+***[other badges?]***
+
+***[also reference [lacan/Olivier Burri](https://gist.github.com/lacan/0a12113b1497db86d7df3ef102efd34d) for original Branch Pruning script -> license]***
 
 
 
@@ -78,7 +80,7 @@ Below is a brief description of each parameter and how to assess the proper sett
 
     To assess proper setting, the binary image is compared to the input image. Ideally, the entire vessel structure should be present in the binary image, while the detail of brighter regions should be preserved. Recognition of weakly fluorescing vessels can be improved by lowering the brightness maximum. Conversely, to improve definition, the brightness maximum and minimum can be increased. In practice, this balance might be difficult to achieve, especially in images exhibiting non-homogeneous fluorescence and high background fluorescence. In such cases, the implication of the Subtract Background function may improve the results.
     
-- **Maximum and Minimum Filter Parameters** and **$\sigma$ Parameter**: The maximum and minimum filters act as a three-dimensional substitute for morphological closing and are used to reconnect fragmented vessels. The respective parameters define the radius of each filter in voxels. Similarly, the Gaussian blur recombines fragmented vessels and prevents small artifactual segments along the segments. The $\sigma$ value is proportional to the radius of the Gaussian blur.
+- **$\sigma$ Parameter** and **Maximum and Minimum Filter Parameters**: The Gaussian blur recombines fragmented vessels and prevents small artifactual segments along the segments. The $\sigma$ value is proportional to the radius of the Gaussian blur. Similarly, the maximum and minimum filters act as a three-dimensional substitute for morphological closing and are used to reconnect fragmented vessels. The respective parameters define the radius of each filter in voxels.
 
     To test the parameter setting, the skeletonized image is compared to the input image. Ideally, no fragmented vessels or small artifacts are present, while the detail of the structures is maintained.
 
@@ -107,3 +109,5 @@ Contributions to VESNA are very welcome! If you have a feature request, bug repo
 
 
 ## License
+
+***[MIT License?]***
