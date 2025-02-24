@@ -8,6 +8,11 @@ VESNA (Vessel Segmentation and Network Analysis) is a macro for the open-source 
 
 ***[also reference [lacan/Olivier Burri](https://gist.github.com/lacan/0a12113b1497db86d7df3ef102efd34d) for original Branch Pruning script -> license]***
 
+When using VESNA, please cite our publication: <br>
+***[citation of the paper]***
+
+Feel free to use the `citation.bib` file.
+
 
 
 ## Table of Contents
@@ -73,8 +78,6 @@ Each data set has its own unique properties, such as the fluorescence intensity,
 - The **parameters** are then **adjusted** iteratively, until an adequate quality is achieved. For this, it is recommended to select a single representative image out of the set, to speed up the process. For large and detailed vessel structures, it can be helpful to crop this first image for this process.<br><br>
 
 Below is a brief description of each parameter and how to assess the proper setting:
-
-***[check order of parameters in script and in dialog box]***
 
 - **Brightness Parameters**: One of the first steps of the image processing is the brightness adjustment to increase the contrast. The lower and upper limits of the brightness adjustment are defined by the minimum and maximum brightness parameters. 
 
