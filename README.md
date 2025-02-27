@@ -8,6 +8,11 @@ VESNA (Vessel Segmentation and Network Analysis) is a macro for the open-source 
 
 ***[also reference [lacan/Olivier Burri](https://gist.github.com/lacan/0a12113b1497db86d7df3ef102efd34d) for original Branch Pruning script -> license]***
 
+When using VESNA, please cite our publication: <br>
+***[citation of the paper]***
+
+Feel free to use the `citation.bib` file.
+
 
 
 ## Table of Contents
@@ -33,7 +38,7 @@ To install VESNA, follow these steps:
     - In Fiji, go to *Plugins>Install...* in the toolbar. In the window, select the `VESNA_.ijm` file and confirm. In the second window, click *Save*.
     - After restarting Fiji, VESNA will be available in the *Plugins* tab in the toolbar.
 
-3. **Install any Requirements**:
+3. **Install Requirements**:
 
     - Download the `VESNA_branch_pruning.bsh` file from this repository and move it to this folder: `Fiji.app/macros/`.
     - To install Bio-Formats and MorphoLibJ directly from Fiji, go to *Help>Update...* to start the updater. Click *Manage Update Sites* and check **"Bio-Formats"** and **"IJPB-plugins"**, if they are not checked already, and confirm. After restarting Fiji, any newly installed packages are ready for use.
@@ -48,7 +53,7 @@ To use VESNA, follow these steps:
 1. **Prepare the Input Folder**: Create a new folder anywhere on your computer and put any image files you want to process into the folder.
 
     - The input files can be any file format that the Bio-Formats importer can handle, including `.tif`, `.nd2`, `.lif`, and many more.
-    - The input files should contain the unprocessed 3D microscopy images and only the vasculature-specific stain (e. g. CD31). Files with more than one channel cannot be processed at this time.
+    - The input files should contain the unprocessed 3D microscopy images and only the vasculature-specific stain (e. g. CD31). Files with more than one channel cannot be processed with the currect version of VESNA.
 
 2. **Prepare the Output Folder**: Create a new folder anywhere on your computer. The folder should be empty, as files if this folder may be overwritten during image processing.
 
@@ -74,8 +79,6 @@ Each data set has its own unique properties, such as the fluorescence intensity,
 
 Below is a brief description of each parameter and how to assess the proper setting:
 
-***[check order of parameters in script and in dialog box]***
-
 - **Brightness Parameters**: One of the first steps of the image processing is the brightness adjustment to increase the contrast. The lower and upper limits of the brightness adjustment are defined by the minimum and maximum brightness parameters. 
 
     To assess proper setting, the binary image is compared to the input image. Ideally, the entire vessel structure should be present in the binary image, while the detail of brighter regions should be preserved. Recognition of weakly fluorescing vessels can be improved by lowering the brightness maximum. Conversely, to improve definition, the brightness maximum and minimum can be increased. In practice, this balance might be difficult to achieve, especially in images exhibiting non-homogeneous fluorescence and high background fluorescence. In such cases, the implication of the Subtract Background function may improve the results.
@@ -84,7 +87,7 @@ Below is a brief description of each parameter and how to assess the proper sett
 
     To test the parameter setting, the skeletonized image is compared to the input image. Ideally, no fragmented vessels or small artifacts are present, while the detail of the structures is maintained.
 
-- **Analyze Particles Threshold**: To remove any small artifacts from the binary image, the Analyze Particles function is applied. The parameter defines the threshold in px² below which objects are excluded.
+- **Analyze Particles Threshold**: To remove any small artifacts from the binary image, the Analyze Particles function is applied. The parameter defines the threshold in px below which objects are excluded.
 
     The binary and/or skeletonized image is compared to the input image. Small artifacts that are not connected to the rest of the structure should be removed, while correctly segmented structures are not removed.
 
