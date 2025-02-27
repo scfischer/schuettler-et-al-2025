@@ -113,4 +113,4 @@ Contributions to VESNA are very welcome! If you have a feature request, bug repo
 
 ## License
 
-***[MIT License?]***
+VESNA is licensed under the MIT license.
