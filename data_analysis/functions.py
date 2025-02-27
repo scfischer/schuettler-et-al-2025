@@ -291,12 +291,18 @@ def plot_measurements(input_paths, labels, ref_group=0, legend=True, colors=['#8
     if test:
         glass = dict()
 
-        for i, k in zip(range(0, len(input_paths)), keys):
-            glass[k] = glass_delta(reference_group=dict_list[ref_group][k], test_group=dict_list[i][k])
+        for k in keys:
+            glass[k] = []
+            for i in range(0, len(input_paths)):
+                if i != ref_group:
+                    glass[k].append(glass_delta(reference_group=dict_list[ref_group][k], test_group=dict_list[i][k]))
         
-        glass = pd.DataFrame(data=glass, index=['Glass\'s Δ (effect size)'])
+        index = labels
+        del index[ref_group]
+        glass = pd.DataFrame(data=glass, index=index)
+        glass = glass.style.set_caption('Glass\'s Δ (effect sizes)')
         display(glass)
-        
+
         return bonferroni, glass
 
 
@@ -438,25 +444,6 @@ def plot_measurements_doublebox(input_paths, labels, ticks, ref_group=0, legend=
         elif layout == 'vertical':
             if a in [5, 6]:
                 ax.set_xticks(range(0, int(len(input_paths)/2)), ticks)
-
-        # # annotate significance with markers      ## removed
-
-        # # manually annotate significance
-
-        # if a == 6:
-        #     _, upper = ax.get_ylim()
-        #     ax.set_ylim(bottom=None, top=upper*1.1)
-
-        #     ax.annotate('*',
-        #         xy=(0.6, 0.925), 
-        #         xycoords='axes fraction',
-        #         xytext=(0.6, 0.925),
-        #         textcoords='axes fraction',
-        #         va='bottom',
-        #         ha='center',
-        #         arrowprops=dict(arrowstyle='-[, widthB=2')
-        #     )
-
 
     # create legends
     if legend == True:  # format legend 
