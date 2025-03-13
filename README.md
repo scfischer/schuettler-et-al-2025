@@ -2,14 +2,8 @@
 
 VESNA (Vessel Segmentation and Network Analysis) is a macro for the open-source image processing software Fiji/ImageJ enabling the segmentation, skeletonization and quantification of vascular networks.
 
-***[doi]***
-
-***[other badges?]***
-
-***[also reference [lacan/Olivier Burri](https://gist.github.com/lacan/0a12113b1497db86d7df3ef102efd34d) for original Branch Pruning script -> license]***
-
 When using VESNA, please cite our publication: <br>
-***[citation of the paper]***
+*Schüttler, M., Doğan, L., Kirchner, J., Ergün, S., Wörsdörfer, P., & Fischer, S. (2025). VESNA: An Open-Source Tool for Automated 3D Vessel Segmentation and Network Analysis. bioRxiv (Cold Spring Harbor Laboratory). https://doi.org/10.1101/2025.03.05.641600.*
 
 Feel free to use the `citation.bib` file.
 
@@ -91,7 +85,7 @@ Below is a brief description of each parameter and how to assess the proper sett
 
     The binary and/or skeletonized image is compared to the input image. Small artifacts that are not connected to the rest of the structure should be removed, while correctly segmented structures are not removed.
 
-- **Branch Pruning Threshold**: Short artifactual segments that are directly connected to the network are removed using a Branch Pruning function. The parameter defines the length threshold in pixels. 
+- **Branch Pruning Threshold**: Short artifactual segments that are directly connected to the network are removed using a [Branch Pruning BeanShell script](https://gist.github.com/lacan/0a12113b1497db86d7df3ef102efd34d). The parameter defines the length threshold in pixels. 
 
     The parameter is set correctly, if the skeletonized image does not contain any artifactual segments connected the the rest of the structure, while correctly recognized segments are preserved.
 
