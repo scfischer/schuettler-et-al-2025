@@ -1,5 +1,5 @@
 # VESNA
-
+[![DOI](https://zenodo.org/badge/913287242.svg)](https://doi.org/10.5281/zenodo.17019175)
 VESNA (Vessel Segmentation and Network Analysis) is a macro for the open-source image processing software Fiji/ImageJ enabling the segmentation, skeletonization and quantification of vascular networks.
 
 When using VESNA, please cite our publication: <br>
