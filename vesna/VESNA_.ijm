@@ -1,4 +1,4 @@
-// Analyze Vascular System Batch Processing
+// VESNA (Vessel Segmentation and Network Analysis)
 // 2024-01-26 Magdalena Schüttler
 
 
@@ -7,9 +7,9 @@
 
 
 // DIALOG WINDOW
-Dialog.createNonBlocking("BAVS");
+Dialog.createNonBlocking("VESNA");
 Dialog.setInsets(0, 0, 0);
-Dialog.addMessage("Batch Analyze Vascular System");
+Dialog.addMessage("Vessel Segmentation and Network Analysis");
 Dialog.setInsets(15, 0, 0);
 // -> default directories can be set in second argument
 Dialog.addDirectory("input folder:", "");
@@ -161,6 +161,7 @@ for (i=0; i<list.length; i++) {
 		setResult("Volume", 2, volFrac);
 		
 		updateResults();
+		selectWindow("Results");
 		saveAs("Results", outputDir + "Results Volume Fraction"+-(i+1)+".csv");
 		if(checkClose==1) {
 			run("Close");
@@ -244,7 +245,7 @@ for (i=0; i<list.length; i++) {
 		print("Measurement 3 Vascular Branches completed.");
 	}
 	
-	// alle Bilder schließen
+	// close all images
 	if(checkClose==1) {
 		close("*");
 	}
