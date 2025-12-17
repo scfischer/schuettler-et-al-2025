@@ -4,10 +4,9 @@
 VESNA (Vessel Segmentation and Network Analysis) is a macro for the open-source image processing software Fiji/ImageJ enabling the segmentation, skeletonization and quantification of vascular networks.
 
 When using VESNA, please cite our publication: <br>
-*Schüttler, M., Doğan, L., Kirchner, J., Ergün, S., Wörsdörfer, P., & Fischer, S. (2025). VESNA: An Open-Source Tool for Automated 3D Vessel Segmentation and Network Analysis. bioRxiv (Cold Spring Harbor Laboratory). https://doi.org/10.1101/2025.03.05.641600.*
+*Schüttler, M., Doğan, L., Kirchner, J. et al. VESNA: an open-source tool for automated 3D vessel segmentation and network analysis. BMC Bioinformatics 26, 254 (2025). https://doi.org/10.1186/s12859-025-06270-6*
 
 Feel free to use the `citation.bib` file.
-
 
 
 ## Table of Contents
